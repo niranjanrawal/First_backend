@@ -8,7 +8,7 @@ import fs from "fs";
         api_secret:process.env.CLOUDINARY_API_SECRET,  // Click 'View API Keys' above to copy your API secret
 });
 
-const uploadResult = async (localfilepath) =>{
+const uploadCloudinary = async (localfilepath) =>{
 
     try{
         if(!localfilepath) return null
@@ -31,7 +31,7 @@ const uploadResult = async (localfilepath) =>{
     
 }
 
-export {cloudinary}
+export {uploadCloudinary}
 // const uploadResult = await cloudinary.uploader
 //        .upload(
 //            'https://res.cloudinary.com/demo/image/upload/getting-started/shoes.jpg', {
